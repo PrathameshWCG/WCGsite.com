@@ -267,6 +267,36 @@
                 border-color: #8ecae6 !important; /* Ensures any yellow borders are also updated */
             }
 
+            /* Container adjustments */
+            .master-marquees {
+                overflow: hidden;
+                width: 100%;
+                background: white;
+                padding: 30px 0; /* Vertical breathing room */
+                border-top: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+            }
+            /* The moving wrapper */
+            .marquee-text-wrap {
+                display: flex;
+                width: max-content;
+                align-items: center; /* Vertically centers logos of different shapes */
+                animation: scroll 30s linear infinite;
+            }
+            /* LOGO SIZE INCREASE */
+            .marquee-logo.large {
+                height: 240px;
+                width: auto;        /* Keeps proportions perfect */
+                max-width: 200px;   /* Prevents wide logos from taking over */
+                margin: 0 10px;
+                object-fit: contain; /* Ensures logo isn't cropped */
+            }
+            /* Smooth Infinite Loop */
+            @keyframes scroll {
+                from { transform: translateX(0); }
+                to { transform: translateX(-50%); }
+            }
+
         </style>
         <link href="https://fonts.googleapis.com" rel="preconnect"/>
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
@@ -922,79 +952,48 @@
                     <div class="w-layout-blockcontainer main-container w-container">
                         <div class="section-divider"></div>
                     </div>
+
                     <div class="master-marquees">
-                        <div data-w-id="6da685de-429f-3b99-a5eb-c1be54bef959" style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="marquee-text-wrap">
+                        <div class="marquee-text-wrap">
                             <div class="single-text-marquee">
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1154b0b9419f96912a5_Marriott%20Intl.avif" alt="" class="marquee-logo large"/>
-                                <img sizes="(max-width: 1536px) 100vw, 1536px" srcset="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1e433e11a68a04fe8c0_Audi-Logo-p-500.avif 500w, https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1e433e11a68a04fe8c0_Audi-Logo.avif 1536w" alt="" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1e433e11a68a04fe8c0_Audi-Logo.avif" loading="lazy" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1bac6c12c341bbf0293_milton%20logo.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819d828bbb8a46a5a274f08_android-chrome-512x512.avif" alt="" class="marquee-logo larger"/>
-                                <img sizes="(max-width: 1200px) 100vw, 1200px" srcset="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea0f134a49f5a45d25abb_Google_2015_logo.svg-p-500.webp 500w, https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea0f134a49f5a45d25abb_Google_2015_logo.svg.webp 1200w" alt="" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea0f134a49f5a45d25abb_Google_2015_logo.svg.webp" loading="lazy" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea05dc1c6ce1216d98ff7_Carlton%20logo.avif" alt="" class="marquee-logo small"/>
-                                <img sizes="(max-width: 2093px) 100vw, 2093px" srcset="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea24b49dbae6f92df6a13_l-color-p-500.png 500w, https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea24b49dbae6f92df6a13_l-color.avif 2093w" alt="" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea24b49dbae6f92df6a13_l-color.avif" loading="lazy" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e3113f98fb67f81da3689_30.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e47d4d4a3798fc7bb3bac_34.avif" alt="" class="marquee-logo larger"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e311b0996393aaf29cccb_31.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e47fddfac05f767b284a9_36.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e4807f3deed0bc950cb53_37.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e48a3e59ad688181d002d_39.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e48b15f6ecba6da2b2a53_38.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819da74c3bac3f306288e72_Blue-sea-logo.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819daf3421006a9a0961e57_paytm%20logo.avif" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819dc5df754d913d1e515c4_Fairfield_Marriott_Mumbai_Logo-removebg-preview.avif" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819dc7a9c70c5592f64ef9c_blue%20logo%20britime.avif" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819dcb24941d5e7ca7f947c_logo_result%20(1).webp" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819ddb8479be5aeaa07ba2d_android-chrome-512x512.avif" alt="" class="marquee-logo larger"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/68610f6c29a7161524e1888f_tots.png" alt="" class="marquee-logo larger"/>
+                                <img src="Assets/logos/upgrad.jpg" alt="upGrad" class="marquee-logo large"/>
+                                <img src="Assets/logos/stf.jpg" alt="STF" class="marquee-logo large"/>
+                                <img src="Assets/logos/satoshifx.jpg" alt="SATOSHIFX" class="marquee-logo large"/>
+                                <img src="Assets/logos/consta-ai.jpg" alt="consta ai" class="marquee-logo large"/>
+                                <img src="Assets/logos/businessraasta.jpg" alt="Business Raasta" class="marquee-logo large"/>
+                                <img src="Assets/logos/bccm.jpg" alt="BCCM" class="marquee-logo large"/>
+                                <img src="Assets/logos/aquaplus.jpg" alt="AQUAPLUS" class="marquee-logo large"/>
+                                <img src="Assets/logos/eimt.jpg" alt="EIMT" class="marquee-logo large"/>
+                                <img src="Assets/logos/radisson-blu.jpg" alt="Radisson BLU" class="marquee-logo large"/>
+                                <img src="Assets/logos/yamaha.jpg" alt="YAMAHA" class="marquee-logo large"/>
+                                <img src="Assets/logos/force-motors.jpg" alt="FORCE MOTORS" class="marquee-logo large"/>
+                                <img src="Assets/logos/santosh-tiwari.jpg" alt="ST" class="marquee-logo large"/>
+                                <img src="Assets/logos/madhursa.jpg" alt="Madhursa" class="marquee-logo large"/>
+                                <img src="Assets/logos/pw.jpg" alt="PW" class="marquee-logo large"/>
+                                <img src="Assets/logos/woomaniya.jpg" alt="WOOMANIYA" class="marquee-logo large"/>
+                                <img src="Assets/logos/s8.jpg" alt="S8" class="marquee-logo large"/>
                             </div>
                             <div class="single-text-marquee">
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1154b0b9419f96912a5_Marriott%20Intl.avif" alt="" class="marquee-logo large"/>
-                                <img sizes="(max-width: 1536px) 100vw, 1536px" srcset="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1e433e11a68a04fe8c0_Audi-Logo-p-500.avif 500w, https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1e433e11a68a04fe8c0_Audi-Logo.avif 1536w" alt="" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1e433e11a68a04fe8c0_Audi-Logo.avif" loading="lazy" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1bac6c12c341bbf0293_milton%20logo.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819d828bbb8a46a5a274f08_android-chrome-512x512.avif" alt="" class="marquee-logo larger"/>
-                                <img sizes="(max-width: 1200px) 100vw, 1200px" srcset="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea0f134a49f5a45d25abb_Google_2015_logo.svg-p-500.webp 500w, https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea0f134a49f5a45d25abb_Google_2015_logo.svg.webp 1200w" alt="" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea0f134a49f5a45d25abb_Google_2015_logo.svg.webp" loading="lazy" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea05dc1c6ce1216d98ff7_Carlton%20logo.avif" alt="" class="marquee-logo small"/>
-                                <img sizes="(max-width: 2093px) 100vw, 2093px" srcset="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea24b49dbae6f92df6a13_l-color-p-500.png 500w, https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea24b49dbae6f92df6a13_l-color.avif 2093w" alt="" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea24b49dbae6f92df6a13_l-color.avif" loading="lazy" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e3113f98fb67f81da3689_30.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e47d4d4a3798fc7bb3bac_34.avif" alt="" class="marquee-logo larger"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e311b0996393aaf29cccb_31.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e47fddfac05f767b284a9_36.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e4807f3deed0bc950cb53_37.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e48a3e59ad688181d002d_39.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e48b15f6ecba6da2b2a53_38.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819da74c3bac3f306288e72_Blue-sea-logo.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819daf3421006a9a0961e57_paytm%20logo.avif" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819dc5df754d913d1e515c4_Fairfield_Marriott_Mumbai_Logo-removebg-preview.avif" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819dc7a9c70c5592f64ef9c_blue%20logo%20britime.avif" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819dcb24941d5e7ca7f947c_logo_result%20(1).webp" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819ddb8479be5aeaa07ba2d_android-chrome-512x512.avif" alt="" class="marquee-logo larger"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/68610f6c29a7161524e1888f_tots.png" alt="" class="marquee-logo larger"/>
-                            </div>
-                            <div class="single-text-marquee">
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1154b0b9419f96912a5_Marriott%20Intl.avif" alt="" class="marquee-logo large"/>
-                                <img sizes="(max-width: 1536px) 100vw, 1536px" srcset="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1e433e11a68a04fe8c0_Audi-Logo-p-500.avif 500w, https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1e433e11a68a04fe8c0_Audi-Logo.avif 1536w" alt="" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1e433e11a68a04fe8c0_Audi-Logo.avif" loading="lazy" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea1bac6c12c341bbf0293_milton%20logo.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819d828bbb8a46a5a274f08_android-chrome-512x512.avif" alt="" class="marquee-logo larger"/>
-                                <img sizes="(max-width: 1200px) 100vw, 1200px" srcset="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea0f134a49f5a45d25abb_Google_2015_logo.svg-p-500.webp 500w, https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea0f134a49f5a45d25abb_Google_2015_logo.svg.webp 1200w" alt="" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea0f134a49f5a45d25abb_Google_2015_logo.svg.webp" loading="lazy" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea05dc1c6ce1216d98ff7_Carlton%20logo.avif" alt="" class="marquee-logo small"/>
-                                <img sizes="(max-width: 2093px) 100vw, 2093px" srcset="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea24b49dbae6f92df6a13_l-color-p-500.png 500w, https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea24b49dbae6f92df6a13_l-color.avif 2093w" alt="" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/67dea24b49dbae6f92df6a13_l-color.avif" loading="lazy" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e3113f98fb67f81da3689_30.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e47d4d4a3798fc7bb3bac_34.avif" alt="" class="marquee-logo larger"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e311b0996393aaf29cccb_31.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e47fddfac05f767b284a9_36.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e4807f3deed0bc950cb53_37.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e48a3e59ad688181d002d_39.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/680e48b15f6ecba6da2b2a53_38.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819da74c3bac3f306288e72_Blue-sea-logo.avif" alt="" class="marquee-logo large"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819daf3421006a9a0961e57_paytm%20logo.avif" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819dc5df754d913d1e515c4_Fairfield_Marriott_Mumbai_Logo-removebg-preview.avif" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819dc7a9c70c5592f64ef9c_blue%20logo%20britime.avif" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819dcb24941d5e7ca7f947c_logo_result%20(1).webp" alt="" class="marquee-logo small"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/6819ddb8479be5aeaa07ba2d_android-chrome-512x512.avif" alt="" class="marquee-logo larger"/>
-                                <img loading="lazy" src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/68610f6c29a7161524e1888f_tots.png" alt="" class="marquee-logo larger"/>
+                                <img src="Assets/logos/upgrad.jpg" alt="upGrad" class="marquee-logo large"/>
+                                <img src="Assets/logos/stf.jpg" alt="STF" class="marquee-logo large"/>
+                                <img src="Assets/logos/satoshifx.jpg" alt="SATOSHIFX" class="marquee-logo large"/>
+                                <img src="Assets/logos/consta-ai.jpg" alt="consta ai" class="marquee-logo large"/>
+                                <img src="Assets/logos/businessraasta.jpg" alt="Business Raasta" class="marquee-logo large"/>
+                                <img src="Assets/logos/bccm.jpg" alt="BCCM" class="marquee-logo large"/>
+                                <img src="Assets/logos/aquaplus.jpg" alt="AQUAPLUS" class="marquee-logo large"/>
+                                <img src="Assets/logos/eimt.jpg" alt="EIMT" class="marquee-logo large"/>
+                                <img src="Assets/logos/radisson-blu.jpg" alt="Radisson BLU" class="marquee-logo large"/>
+                                <img src="Assets/logos/yamaha.jpg" alt="YAMAHA" class="marquee-logo large"/>
+                                <img src="Assets/logos/force-motors.jpg" alt="FORCE MOTORS" class="marquee-logo large"/>
+                                <img src="Assets/logos/santosh-tiwari.jpg" alt="ST" class="marquee-logo large"/>
+                                <img src="Assets/logos/madhursa.jpg" alt="Madhursa" class="marquee-logo large"/>
+                                <img src="Assets/logos/pw.jpg" alt="PW" class="marquee-logo large"/>
+                                <img src="Assets/logos/woomaniya.jpg" alt="WOOMANIYA" class="marquee-logo large"/>
+                                <img src="Assets/logos/s8.jpg" alt="S8" class="marquee-logo large"/>
                             </div>
                         </div>
                     </div>
+
                     <div class="w-layout-blockcontainer main-container w-container">
                         <div class="section-divider"></div>
                     </div>
