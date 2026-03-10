@@ -873,5 +873,75 @@
         <script src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/js/webflow.schunk.7277ba542fc68a9a.js" type="text/javascript"></script>
         <script src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/js/webflow.schunk.ffd953334ce057bc.js" type="text/javascript"></script>
         <script src="https://cdn.prod.website-files.com/67baec8acda347f8a7b9e834/js/webflow.07b66815.a76d37ce297cb541.js" type="text/javascript"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            // Target the exact form ID from your HTML
+            const contactForm = document.getElementById('wf-form-Company-Name');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    // 1. Stop Webflow from doing its default submission
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // Optional: Change submit button text to show it's working
+                    const submitBtn = contactForm.querySelector('input[type="submit"]');
+                    const originalBtnText = submitBtn.value;
+                    submitBtn.value = "Sending...";
+
+                    // 2. Gather data using the EXACT IDs from your HTML snippet
+                    const formData = {
+                        name: document.getElementById('Name').value,
+                        email: document.getElementById('Email-3').value,
+                        contactNo: document.getElementById('Phone').value,
+                        services: document.getElementById('Services').value,
+                        companyName: document.getElementById('Company-Name').value,
+                        message: document.getElementById('Message').value
+                    };
+
+                    // 3. Send to your Spring Boot Backend (Port 8081)
+                    fetch('http://localhost:8081/api/contact/submit', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    })
+                    .then(async response => {
+                        submitBtn.value = originalBtnText; // Reset button text
+
+                        if (response.ok) {
+                            Swal.fire({
+                                title: "Message Sent!",
+                                text: "Thank you for reaching out. Our management team has received your details and will get back to you shortly.",
+                                icon: "success",
+                                confirmButtonText: "Done",
+                                confirmButtonColor: "#333333" // A sleek dark gray
+                            });
+
+                            contactForm.reset(); // Clear the form
+                        } else {
+                            // Modern Error Popup
+                            Swal.fire({
+                                title: "Oops!",
+                                text: "Something went wrong. Please try again later.",
+                                icon: "error",
+                                confirmButtonColor: "#d33"
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        submitBtn.value = originalBtnText;
+                        console.error('Fetch Error:', error);
+
+                        Swal.fire({
+                            title: "Connection Error",
+                            text: "Could not reach the server. Please ensure the backend is running.",
+                            icon: "warning",
+                            confirmButtonColor: "#f8bb86"
+                        });
+                    });
+                });
+            }
+        </script>
     </body>
 </html>
