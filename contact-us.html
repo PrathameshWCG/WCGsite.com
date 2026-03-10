@@ -901,7 +901,7 @@
                     };
 
                     // 3. Send to your Spring Boot Backend (Port 8081)
-                    fetch('http://localhost:8081/api/contact/submit', {
+                    fetch('https://wcg-website-backend.onrender.com/api/contact/submit', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(formData)
