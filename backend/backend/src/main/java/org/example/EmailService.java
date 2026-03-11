@@ -24,12 +24,12 @@ public class EmailService {
     public void sendEmailNotification(ContactRequest request) {
 
         // ⚠️ CRITICAL: The "from" email MUST be the exact Gmail address you just verified in SendGrid
-        Email from = new Email("your.verified.email@gmail.com");
+        Email from = new Email("anilwhitecirclegroup@gmail.com");
 
         String subject = "New Contact Request: " + request.getCompanyName();
 
         // The management email where you want to receive the notifications
-        Email to = new Email("management.email@whitecirclegroup.in");
+        Email to = new Email("nilesh@whitecirclegroup.in");
 
         String mailBody = "A new contact request has been submitted.\n\n" +
                 "Name: " + request.getName() + "\n" +
