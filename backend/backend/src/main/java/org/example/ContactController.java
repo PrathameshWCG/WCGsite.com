@@ -23,6 +23,7 @@ public class ContactController {
 
             return "Success: Request stored and management notified!"; // 3. Instant reply to user
         } catch (Exception e) {
+            e.printStackTrace();
             return "Error: Could not process request. " + e.getMessage();
         }
     }

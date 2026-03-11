@@ -909,26 +909,31 @@
                     .then(async response => {
                         submitBtn.value = originalBtnText; // Reset button text
 
-                        if (response.ok) {
+                        // NEW: Actually read the text sent back by Java!
+                        const responseText = await response.text();
+
+                        // Check if it was a 200 OK AND the text says "Success"
+                        if (response.ok && responseText.includes("Success")) {
                             Swal.fire({
                                 title: "Message Sent!",
                                 text: "Thank you for reaching out. Our management team has received your details and will get back to you shortly.",
                                 icon: "success",
                                 confirmButtonText: "Done",
-                                confirmButtonColor: "#333333" // A sleek dark gray
+                                confirmButtonColor: "#333333"
                             });
 
-                            contactForm.reset(); // Clear the form
+                            contactForm.reset();
                         } else {
-                            // Modern Error Popup
+                            // NEW: If the backend caught an error, display the exact Java error on the screen!
                             Swal.fire({
-                                title: "Oops!",
-                                text: "Something went wrong. Please try again later.",
+                                title: "Backend Error",
+                                text: responseText, // This prints the exact exception
                                 icon: "error",
                                 confirmButtonColor: "#d33"
                             });
                         }
                     })
+
                     .catch(error => {
                         submitBtn.value = originalBtnText;
                         console.error('Fetch Error:', error);
